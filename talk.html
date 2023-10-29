@@ -85,7 +85,16 @@
 <!-- JS -->
 <script src="https://3jxkfrdkfhha.ngrok.xiaomiqiu123.top/dist/Artalk.js"></script>
 <!-- Artalk -->
-<include src="Arttalk.html"></include>
+<center><div id="Comments"style="width:900px;"></div></center>
+<script>
+new Artalk({
+  el:        '#Comments',// 绑定元素的 Selector
+  pageKey:   'https://pangxitong.github.io/mccu/index.html',// 固定链接 (留空自动获取)
+  pageTitle: '',  // 页面标题 (留空自动获取)
+  server:    'https://3jxkfrdkfhha.ngrok.xiaomiqiu123.top',  // 后端地址
+  site:      'MCCU',             // 你的站点名
+})
+</script>
 <br><br><div style="font-size:16px;">评论服务由庞玺桐的个人iMac上构建的自建Artalk服务器提供</div><br>
         <style>
         .button1 {
