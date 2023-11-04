@@ -181,7 +181,55 @@
       </div>
     </div> 
   </div>
-  
+  <div class="text-center my-7">
+    <h2 class="h2-mktg col-lg-7 mx-auto">服务器信息</h2>
+  </div>
+  <script src="./copy.js"></script>
+  <script>
+    function copyUrl(url) {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(url).then(function() {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Copied!',
+                    text: 'The URL has been copied to the clipboard.',
+                    timer: 2000,
+                    showConfirmButton: false
+                });
+            }, function() {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Copy Failed',
+                    text: 'Please try again.',
+                    timer: 2000,
+                    showConfirmButton: false
+                });
+            });
+        } else {
+            // 兼容旧版浏览器
+            var textArea = document.createElement("textarea");
+            textArea.value = url;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand("copy");
+            document.body.removeChild(textArea);
+    
+            Swal.fire({
+                icon: 'success',
+                title: 'Copied!',
+                text: 'The URL has been copied to the clipboard.',
+                timer: 2000,
+                showConfirmButton: false
+            });
+        }
+    }
+    </script>
+  <center>
+    <div class="text-left"style="max-width:800px">
+      <h3 style="font-size: medium;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;此服务器为原版生存服务器，游戏规则是每周六更新一个版本，目前游戏版本是1.12，玩家仅可通过1.12客户端登陆此服务器;
+      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;服务器地址：<a href="frp-arm.top:44240" target="_blank">frp-arm.top:44240</a><button type="button" onclick="copyUrl('frp-arm.top:44240')">复制</button></h3>
+    </div>
+  </center>
   <!-- 我的项目 -->
 <div class="d-none d-md-block position-absolute width-full left-0 right-0 z-n1" style="top: 40%">
   <img class="width-full height-auto" src="./blog/Pricing/bg-whats.svg" aria-hidden="true" alt="" width="1676" height="1040">
